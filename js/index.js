@@ -1,0 +1,1 @@
+(function hitokoto(){var hitokoto="我们在努力扩大自己，以靠近，以触及我们自身以外的世界。";var dom=document.querySelector('#hitokoto');Array.isArray(dom)?dom[0].innerText=hitokoto:dom.innerText=hitokoto;})()

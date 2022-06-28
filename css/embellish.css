@@ -1,0 +1,66 @@
+/*
+//------------
+//QQ755399969
+//留whk.red
+// whk.red
+// 小坤哥哥
+//------------
+*/
+@keyframes move {
+      0% {background-position: 0 0;}
+      100% {
+        /*宽度固定，如果为百分比背景不会滚动*/
+        background-position: -300px 0;
+      }
+}    
+.wrap {
+/*设置背景渐变色*/
+  background-image: linear-gradient(to right, red, orange, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);      
+  /*chrome私有样式，加前缀，文字显示背景图片*/
+  -webkit-background-clip: text;      
+  animation: move 5s infinite;      
+  /*文字颜色设为透明*/
+  color: transparent;      
+  /*宽度固定*/
+  width: 300px;
+}
+.text {
+	width: 500px;
+	height: 200px;
+	background-image: -webkit-linear-gradient(left,blue,#66ffff 10%,#cc00ff 20%,#CC00CC 30%, #CCCCFF 40%, #00FFFF 50%,#CCCCFF 60%,#CC00CC 70%,#CC00FF 80%,#66FFFF 90%,blue 100%);
+	-webkit-text-fill-color: transparent;
+/* 字体设置成透明色 */
+	-webkit-background-clip: text;
+/* 裁剪背景，使文字作为裁剪区域向外裁剪 */
+	-webkit-background-size: 200% 100%;
+	-webkit-animation: masked-animation 4s linear infinite;
+}
+
+@keyframes masked-animation {
+	0% {
+		background-position: 0  0;
+	}
+
+	100% {
+		background-position: -100%  0;
+	}
+}
+.page_list{display:flex;overflow:hidden;padding:10px;background-color:#fff;border-bottom: 1px solid #eee;}
+.page_list .list_box{overflow:hidden;width:25%;text-align:center;}
+.list_box .list_ico i{display:inline-block;width:40px;height:40px;border:1px solid #00bcd4;border-radius:100%;background-color:#00bcd4;color:#fff;font-size:20px;line-height:40px;}
+.page_list .list_box+.list_box i{border:1px solid #ffca7f;background-color:#ffca7f;}
+.page_list .list_box+.list_box+.list_box i{border:1px solid #ff7fa4;background-color:#ff7fa4;}
+.page_list .list_box:last-child .list_ico i{border:1px solid #9edb98;background-color:#9edb98;}
+.list_box .list_title{margin-top:5px;color:#666;}
+::-webkit-scrollbar-track-piece {
+     background-color:#fff;-webkit-border-radius:0
+}
+::-webkit-scrollbar {
+     width:8px;height:8px
+}
+::-webkit-scrollbar-thumb {
+      height:50px;background-color:#999;-webkit-border-radius:4px;outline:2px solid #fff;outline-offset:-2px;border:2px solid #fff
+}
+::-webkit-scrollbar-thumb:hover {
+       height:50px;background-color:#9f9f9f;-webkit-border-radius:4px
+}
